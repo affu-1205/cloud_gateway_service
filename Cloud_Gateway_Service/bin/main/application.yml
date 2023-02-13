@@ -1,0 +1,15 @@
+server:
+  port: 6060
+
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: Assignment1-1
+        uri: http://localhost:7070/
+        predicates:
+        - Path=/task1/**
+      - id: Assignment1-2
+        uri: http://localhost:9090/
+        predicates:
+        - Path=/task2/**     
